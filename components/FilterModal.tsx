@@ -9,7 +9,7 @@ interface FilterDropdownProps {
   }
 
   interface FilterModalProps {
-    visible: boolean;
+    visible?: boolean;
     onClose: () => void;
     onApply: (filters: any) => void;
   }
@@ -45,7 +45,7 @@ const FilterModal = ({ visible, onClose, onApply }: FilterModalProps) => {
         onRequestClose={onClose}
       >
         <View style={styles.centeredView}>
-          <View style={styles.modalView}>
+          <Pressable onPress={(e) => e.stopPropagation()} style={styles.modalView}>
             <View style={styles.header}>
               <Text style={styles.title}>Filters</Text>
               <TouchableOpacity onPress={onClose} style={styles.closeButton}>
@@ -57,7 +57,7 @@ const FilterModal = ({ visible, onClose, onApply }: FilterModalProps) => {
               <FilterDropdown 
                 label={species} 
                 onPress={() => {
-                  // Here you would typically open a picker or another modal
+                  
                   console.log('Select species');
                 }} 
               />
@@ -83,7 +83,7 @@ const FilterModal = ({ visible, onClose, onApply }: FilterModalProps) => {
             >
               <Text style={styles.applyButtonText}>APPLY</Text>
             </TouchableOpacity>
-          </View>
+          </Pressable>
         </View>
       </Modal>
     );
