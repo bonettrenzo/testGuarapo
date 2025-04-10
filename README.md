@@ -62,7 +62,7 @@ https://rickandmortyapi.com/
 
 # Contacto
 Para cualquier pregunta sobre este proyecto, no dudes en contactarme:
-* Email: bonettrenzo@gmail.com
+* Email: bonettrenzo2@gmail.com
 * Teléfono: +57 3118126400
 * GitHub: @bonettrenzo
 
