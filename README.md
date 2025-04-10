@@ -1,50 +1,68 @@
-# Welcome to your Expo app 👋
+# Rick and Morty App - Prueba Técnica para Guarapo Labs
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Rick and Morty App Screenshot](https://via.placeholder.com/300x600?text=App+Screenshot) <!-- Puedes reemplazar esto con una imagen real de tu app -->
 
-## Get started
+Aplicación móvil desarrollada como prueba técnica para Guarapo Labs, que muestra información sobre los personajes de la serie Rick and Morty.
 
-1. Install dependencies
+## Información del Desarrollador
 
+- **Nombre:** Renzo Boneth
+- **Teléfono:** +57 3118126400
+- **Correo:** bonettrenzo@gmail.com
+- **Curriculum:** [Ver en línea](https://curriculum-web-fll6.onrender.com/)
+- **Repositorio del proyecto:** [GitHub](https://github.com/bonettrenzo/testGuarapo)
+
+## Especificaciones Técnicas
+
+- **Node.js:** 20.18.1
+- **Expo:** 52.0.43
+- **React:** 18
+- **React Native:** 0.76
+- **Diseño base:** [Figma](https://www.figma.com/design/Pd8AycDOiq0qXkYWbHU8m9/Rick-and-Morty--Guarapo-?node-id=92-0&t=9xRwBSd4EAAUKYjz-0)
+
+## Características Principales
+
+- Listado de personajes de Rick and Morty
+- Detalle de cada personaje con información completa
+- Búsqueda y filtrado de personajes
+- Diseño responsive siguiendo el figma proporcionado
+
+## Cómo Ejecutar el Proyecto en Desarrollo
+
+Sigue estos pasos para lanzar el proyecto en tu entorno local:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/bonettrenzo/testGuarapo.git
+   cd testGuarapo ```
+
+2. **Instalar dependencias:**
    ```bash
    npm install
    ```
-
-2. Start the app
-
+3. **Iniciar la aplicación**
    ```bash
-    npx expo start
+   npm start 
    ```
+4. **Ejecutar en emulador/dispositivo:**
+Para Android: presiona a en la terminal después de iniciar Expo
+Para iOS: presiona i (requiere Mac y Xcode instalado)
+Para dispositivo físico: escanea el código QR con la app Expo Go
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+# Dependencias Principales
+ * React Navigation
+ * Axios para llamadas API
+ * Redux o Context API (según implementación)
+ * Expo Vector Icons
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+# API Utilizada
+La aplicación consume la API pública de Rick and Morty:
+https://rickandmortyapi.com/
 
-## Get a fresh project
+# Contacto
+Para cualquier pregunta sobre este proyecto, no dudes en contactarme:
+Email: bonettrenzo@gmail.com
+Teléfono: +57 3118126400
+GitHub: @bonettrenzo
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
