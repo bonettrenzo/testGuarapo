@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: "#1F2937",
         height: "100%",
-        paddingVertical: 10, // Cambiado de 100 a un valor más razonable
+        paddingVertical: 10,
     },
 })
 

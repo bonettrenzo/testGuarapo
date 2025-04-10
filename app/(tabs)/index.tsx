@@ -7,7 +7,6 @@ import useModal from '@/hooks/useModal';
 import PersonajeCard from '@/components/PersonajeCard';
 import CustomButton from '@/components/Button';
 import useCharacters from '@/hooks/useCaracters';
-import { SetStateAction } from "react";
 
 import { Link } from 'expo-router';
 import { Filters } from '@/types/type';
@@ -38,7 +37,7 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.containerInput}>
-          <SearchInput placeholder='Filter by name...' value={hookCaracters.filters.name} onChangeText={(text) => handleChange(text, 'name')} />
+          <SearchInput  value={hookCaracters.filters.name} onChangeText={(text) => handleChange(text, 'name')} />
         </View>
 
         <View style={[styles.containerInput, { marginBottom: 40 }]}>

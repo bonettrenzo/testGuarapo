@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, SafeAreaVi
 import { Ionicons } from "@expo/vector-icons"
 import { useNavigation } from "expo-router"
 import { useLocalSearchParams } from "expo-router";
-import { useEffect } from "react";
 import useCharacter from "@/hooks/useCharacter";
 
 
@@ -78,7 +77,7 @@ export default function App() {
                     <Text style={styles.sectionTitle}>Episodes</Text>
 
                     {Array.isArray(episodes) && episodes.map((item) => {
-                        return <View style={styles.episodeItem}>
+                        return <View key={item.episode} style={styles.episodeItem}>
                             <Text style={styles.episodeTitle}>{item.name}</Text>
                             <Text style={styles.episodeSubtitle}>{item.episode}</Text>
                             <Text style={styles.episodeDate}>{item.air_date}</Text>
