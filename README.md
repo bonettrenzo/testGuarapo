@@ -34,4 +34,35 @@ Sigue estos pasos para lanzar el proyecto en tu entorno local:
 1. **Clonar el repositorio:**
    ```bash
    git clone https://github.com/bonettrenzo/testGuarapo.git
-   cd testGuarapo
+   cd testGuarapo ```
+
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+3. **Iniciar la aplicación**
+   ```bash
+   npm start 
+   ```
+4. **Ejecutar en emulador/dispositivo:**
+Para Android: presiona a en la terminal después de iniciar Expo
+Para iOS: presiona i (requiere Mac y Xcode instalado)
+Para dispositivo físico: escanea el código QR con la app Expo Go
+
+
+# Dependencias Principales
+ * React Navigation
+ * Axios para llamadas API
+ * Redux o Context API (según implementación)
+ * Expo Vector Icons
+
+# API Utilizada
+La aplicación consume la API pública de Rick and Morty:
+https://rickandmortyapi.com/
+
+# Contacto
+Para cualquier pregunta sobre este proyecto, no dudes en contactarme:
+Email: bonettrenzo@gmail.com
+Teléfono: +57 3118126400
+GitHub: @bonettrenzo
+
