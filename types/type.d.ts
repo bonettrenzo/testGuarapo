@@ -17,3 +17,17 @@ interface CharacterLocation {
     type: string;
     url: string;
   }
+
+  export type EpisodeInfo = {
+    name: string;
+    air_date: string;
+    episode: string;
+  };
+
+  type Filters = {
+    name: string;
+    species: string;
+    gender: string;
+    status: string;
+  };
+  

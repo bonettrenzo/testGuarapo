@@ -1,6 +1,9 @@
 export const BASE_URL = "https://rickandmortyapi.com/api"
 
+export const noSelect = "Select...";
+
 export const species = [
+    noSelect,
     "Human",
     "Alien",
     "Humanoid",
@@ -12,5 +15,5 @@ export const species = [
     "Disease",
     "Unknown"
 ];
-export const genders = ["Female", "Male", "Genderless", "unknown"];
-const status = ["Alive", "Dead", "unknown"];
+export const genders = [noSelect, "Female", "Male", "Genderless", "unknown"];
+export const status = [noSelect, "Alive", "Dead", "unknown"];

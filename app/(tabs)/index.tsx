@@ -7,12 +7,24 @@ import useModal from '@/hooks/useModal';
 import PersonajeCard from '@/components/PersonajeCard';
 import CustomButton from '@/components/Button';
 import useCharacters from '@/hooks/useCaracters';
+import { SetStateAction } from "react";
+
 import { Link } from 'expo-router';
+import { Filters } from '@/types/type';
 
 export default function HomeScreen() {
 
   const modalFilter = useModal()
   const hookCaracters = useCharacters()
+
+
+  const handleChange = (e: string, field: keyof Filters) => {
+    hookCaracters.setFilters((prev: Filters) => ({
+      ...prev,
+      [field]: e,
+    }));
+  };
+
 
   return (
     <SafeAreaView style={styles.container}>
@@ -26,7 +38,7 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.containerInput}>
-          <SearchInput onChangeText={(text) => console.log(text)} value='' />
+          <SearchInput placeholder='Filter by name...' value={hookCaracters.filters.name} onChangeText={(text) => handleChange(text, 'name')} />
         </View>
 
         <View style={[styles.containerInput, { marginBottom: 40 }]}>
@@ -35,36 +47,31 @@ export default function HomeScreen() {
 
         <View style={styles.containerCard}>
 
-        <FlatList
-  data={hookCaracters.visibleCharacters}
-  keyExtractor={(item) => item.id.toString()}
-  renderItem={({ item }) => (
-    <Link href={{
-      pathname: "/Caracter",
-      params: {
-        id: item.id.toString()
-      }
-    }} asChild>
-      <Pressable>
-        <PersonajeCard 
-          name={item.name} 
-          species={item.species} 
-          uri={item.image} 
-        />
-      </Pressable>
-    </Link>
-  )}
-  ListEmptyComponent={
-    <Text>No hay personajes para mostrar</Text>
-  }
-/>
+          { Array.isArray(hookCaracters.visibleCharacters) && hookCaracters.visibleCharacters.length > 0 ? hookCaracters.visibleCharacters.map((item) => (
+            <Link
+              key={item.id}
+              href={{
+                pathname: "/Caracter",
+                params: { id: item.id.toString() }
+              }}
+              asChild
+            >
+              <Pressable>
+                <PersonajeCard
+                  name={item.name}
+                  species={item.species}
+                  uri={item.image}
+                />
+              </Pressable>
+            </Link>
+          )) : <Text style={{ fontSize: 20, color: "black", display: "flex", justifyContent: "center", alignItems: "center" }}>No se encontraron personajes</Text>}
         </View>
 
         <View style={styles.containerCard}>
           <CustomButton title="LOAD MORE" onPress={hookCaracters.handleLoadMore} />
         </View>
       </ScrollView>
-      {modalFilter.visible ? <FilterModal visible={modalFilter.visible} onClose={modalFilter.toggleModal} onApply={(filters: any) => { }} /> : null}
+      {modalFilter.visible ? <FilterModal handleChange={handleChange} filtersValue={hookCaracters.filters} visible={modalFilter.visible} onClose={modalFilter.toggleModal} /> : null}
     </SafeAreaView>
   );
 }
