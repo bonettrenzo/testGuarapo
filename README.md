@@ -1,6 +1,6 @@
 # Rick and Morty App - Prueba Técnica para Guarapo Labs
 
-![Rick and Morty App Screenshot]([https://github.com/bonettrenzo/testGuarapo/blob/main/assets/splashIcone.png?raw=true](https://github.com/bonettrenzo/testGuarapo/blob/main/assets/splashIcone.png?raw=true))
+![Rick and Morty App Screenshot](https://github.com/bonettrenzo/testGuarapo/blob/main/assets/splashIcone.png?raw=true)
 
 Aplicación móvil desarrollada como prueba técnica para Guarapo Labs, que muestra información sobre los personajes de la serie Rick and Morty.
 
