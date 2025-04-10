@@ -66,3 +66,14 @@ Para cualquier pregunta sobre este proyecto, no dudes en contactarme:
 * Teléfono: +57 3118126400
 * GitHub: @bonettrenzo
 
+## IMAGENES DE DEMOSTRACIÓN
+
+# HOME
+![HOME](https://github.com/bonettrenzo/testGuarapo/blob/main/assets/imagenesDemostracion/home.png?raw=true)
+
+# FILTER
+![FILTER](https://github.com/bonettrenzo/testGuarapo/blob/main/assets/imagenesDemostracion/filters.png?raw=true)
+
+# DETAIL
+![DETAIL](https://github.com/bonettrenzo/testGuarapo/blob/main/assets/imagenesDemostracion/detallePersonaje.png?raw=true)
+
