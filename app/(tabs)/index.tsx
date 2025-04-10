@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, StyleSheet, View, ScrollView, Button } from 'react-native';
+import { Image, SafeAreaView, StyleSheet, View, ScrollView, Button, FlatList, Pressable, Text } from 'react-native';
 
 import SearchInput from '@/components/SearchInput';
 import AdvancedFiltersButton from '@/components/AdvancedFiltersButton';
@@ -6,10 +6,14 @@ import FilterModal from '@/components/FilterModal';
 import useModal from '@/hooks/useModal';
 import PersonajeCard from '@/components/PersonajeCard';
 import CustomButton from '@/components/Button';
+import useCharacters from '@/hooks/useCaracters';
+import { Link } from 'expo-router';
 
 export default function HomeScreen() {
 
   const modalFilter = useModal()
+  const hookCaracters = useCharacters()
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -25,17 +29,39 @@ export default function HomeScreen() {
           <SearchInput onChangeText={(text) => console.log(text)} value='' />
         </View>
 
-        <View style={styles.containerInput}>
+        <View style={[styles.containerInput, { marginBottom: 40 }]}>
           <AdvancedFiltersButton onPress={modalFilter.toggleModal} />
         </View>
 
         <View style={styles.containerCard}>
-          <PersonajeCard name='Rick Sanchez' species='Human' uri='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BJQnVhHAIiC0zRuO2ETdx9Tvwucr27.png' />
-          <PersonajeCard name='Rick Sanchez' species='Human' uri='https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-BJQnVhHAIiC0zRuO2ETdx9Tvwucr27.png' />
+
+        <FlatList
+  data={hookCaracters.visibleCharacters}
+  keyExtractor={(item) => item.id.toString()}
+  renderItem={({ item }) => (
+    <Link href={{
+      pathname: "/Caracter",
+      params: {
+        id: item.id.toString()
+      }
+    }} asChild>
+      <Pressable>
+        <PersonajeCard 
+          name={item.name} 
+          species={item.species} 
+          uri={item.image} 
+        />
+      </Pressable>
+    </Link>
+  )}
+  ListEmptyComponent={
+    <Text>No hay personajes para mostrar</Text>
+  }
+/>
         </View>
 
         <View style={styles.containerCard}>
-          <CustomButton title="LOAD MORE" onPress={() => console.log('load more')} />
+          <CustomButton title="LOAD MORE" onPress={hookCaracters.handleLoadMore} />
         </View>
       </ScrollView>
       {modalFilter.visible ? <FilterModal visible={modalFilter.visible} onClose={modalFilter.toggleModal} onApply={(filters: any) => { }} /> : null}

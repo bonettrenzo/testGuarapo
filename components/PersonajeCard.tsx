@@ -25,7 +25,7 @@ const PersonajeCard = ({uri, name, species}: PersonajeCardProps) => {
 
 const styles = StyleSheet.create({
   card: {
-    width: 370,
+    width: 340,
     height: 308,
     backgroundColor: '#fff',
     shadowColor: '#000',
