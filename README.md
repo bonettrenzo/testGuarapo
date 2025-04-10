@@ -1,6 +1,6 @@
 # Rick and Morty App - Prueba Técnica para Guarapo Labs
 
-![Rick and Morty App Screenshot](https://via.placeholder.com/300x600?text=App+Screenshot) <!-- Puedes reemplazar esto con una imagen real de tu app -->
+![Rick and Morty App Screenshot](https://github.com/bonettrenzo/testGuarapo/blob/main/assets/splashIcone.png?raw=true)
 
 Aplicación móvil desarrollada como prueba técnica para Guarapo Labs, que muestra información sobre los personajes de la serie Rick and Morty.
 
@@ -62,7 +62,7 @@ https://rickandmortyapi.com/
 
 # Contacto
 Para cualquier pregunta sobre este proyecto, no dudes en contactarme:
-Email: bonettrenzo@gmail.com
-Teléfono: +57 3118126400
-GitHub: @bonettrenzo
+* Email: bonettrenzo@gmail.com
+* Teléfono: +57 3118126400
+* GitHub: @bonettrenzo
 
