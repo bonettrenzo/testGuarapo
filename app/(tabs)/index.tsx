@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, StyleSheet, View, ScrollView, Button, FlatList, Pressable, Text } from 'react-native';
+import { Image, SafeAreaView, StyleSheet, View, ScrollView,Pressable, Text } from 'react-native';
 
 import SearchInput from '@/components/SearchInput';
 import AdvancedFiltersButton from '@/components/AdvancedFiltersButton';

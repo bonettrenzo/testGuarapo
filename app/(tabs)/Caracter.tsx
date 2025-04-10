@@ -37,7 +37,6 @@ export default function App() {
                     <Text style={styles.profileName}>{`${character?.name}`}</Text>
                 </View>
 
-                {/* Information Section */}
                 <View style={styles.section}>
                     <Text style={styles.sectionTitle}>Informations</Text>
 
@@ -72,7 +71,6 @@ export default function App() {
                     </View>
                 </View>
 
-                {/* Episodes Section */}
                 <View style={styles.section}>
                     <Text style={styles.sectionTitle}>Episodes</Text>
 
