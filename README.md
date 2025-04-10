@@ -51,9 +51,8 @@ Para dispositivo físico: escanea el código QR con la app Expo Go
 
 
 # Dependencias Principales
- * React Navigation
+ * Expo Navigation
  * Axios para llamadas API
- * Redux o Context API (según implementación)
  * Expo Vector Icons
 
 # API Utilizada
